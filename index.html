@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NGANO — Zimbabwean Folktales</title>
+<meta name="description" content="Watch traditional Zimbabwean Shona folktales (ngano) with English subtitles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1E2A4A;--sun:#FFC83D;--sky:#1E7FD6;--sky-l:#DDF0FF;--grass:#27A745;--coral:#D93A2E;--plum:#7B3FF2;--cream:#FFF7DC;--muted:#4A5675;
+--display:"Fredoka","Trebuchet MS",system-ui,sans-serif;--body:"Nunito","Segoe UI",system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--ink);font:600 1.08rem/1.65 var(--body);overflow-x:hidden}
+img,svg,video{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--plum);outline-offset:3px}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 clamp(1rem,4vw,2rem)}
+.sr{position:absolute;left:-9999px}
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:4px solid var(--sun)}
+nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:1rem}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.mono{width:46px;height:46px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;font:700 1.6rem var(--display);box-shadow:0 0 0 4px var(--sun)}
+.brand b{display:block;font:700 1.4rem/1 var(--display);letter-spacing:.12em;color:var(--sky)}
+.brand small{display:block;margin-top:.2rem;font:800 .6rem/1 var(--body);letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.links{display:none;gap:.4rem;list-style:none;margin:0;padding:0}
+.links a{display:block;text-decoration:none;font:600 1rem var(--display);padding:.6rem 1.1rem;border-radius:999px;transition:background .25s,color .25s}
+.links a:hover{background:var(--sun)}
+.burger{background:var(--sun);border:0;color:var(--ink);width:46px;height:46px;border-radius:14px;cursor:pointer;font-size:1.3rem}
+.menu{display:none;background:#fff;border-top:2px dashed var(--sun)}
+.menu.open{display:block}
+.menu a{display:block;padding:1rem 1.25rem;text-decoration:none;font:600 1.15rem var(--display);border-bottom:1px solid #f1e6bd}
+@media(min-width:760px){.links{display:flex}.burger,.menu{display:none!important}}
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#8fd3ff 0%,#cdeeff 55%,#fff4c9 100%);min-height:min(88svh,780px);display:grid;align-items:center}
+.hero svg.art{position:absolute;inset:0;width:100%;height:100%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.88) 0%,rgba(255,255,255,.55) 45%,rgba(255,255,255,0) 75%)}
+@media(max-width:759px){.hero::after{background:linear-gradient(180deg,rgba(255,255,255,.9) 0%,rgba(255,255,255,.6) 60%,rgba(255,255,255,.05) 100%)}}
+.hero .wrap{position:relative;z-index:2;padding-top:3.5rem;padding-bottom:6rem}
+.eyebrow{display:inline-block;background:var(--plum);color:#fff;font:600 .85rem var(--display);letter-spacing:.14em;text-transform:uppercase;padding:.5rem 1rem;border-radius:999px;margin:0 0 1.2rem}
+h1{font:700 clamp(2.6rem,8vw,5.6rem)/1.02 var(--display);margin:0 0 1.2rem;max-width:12ch}
+h1 em{font-style:normal;color:var(--plum);background:linear-gradient(transparent 64%,var(--sun) 64%)}
+.lead{max-width:34rem;font-size:clamp(1.05rem,2.2vw,1.25rem);margin:0 0 2rem;color:#27345a}
+.btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--coral);color:#fff;border:0;border-radius:999px;padding:1rem 1.7rem;font:600 1.05rem var(--display);letter-spacing:.04em;text-decoration:none;cursor:pointer;box-shadow:0 6px 0 #a82a21;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 0 #a82a21}
+.btn:active{transform:translateY(4px);box-shadow:0 2px 0 #a82a21}
+.btn.alt{background:var(--sky);box-shadow:0 6px 0 #135ea3}
+.btn.alt:hover{box-shadow:0 8px 0 #135ea3}
+.btn.alt:active{box-shadow:0 2px 0 #135ea3}
+.rise{opacity:0;transform:translateY(18px);animation:rise 1s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:.1s}.d2{animation-delay:.35s}.d3{animation-delay:.6s}.d4{animation-delay:.85s}
+@keyframes rise{to{opacity:1;transform:none}}
+.cloud{animation:drift 40s linear infinite alternate}
+@keyframes drift{to{transform:translateX(60px)}}
+/* sections */
+section.s{padding:clamp(3.5rem,8vw,6rem) 0}
+.head{text-align:center;max-width:40rem;margin:0 auto 3rem}
+h2{font:700 clamp(2rem,5vw,3.2rem)/1.1 var(--display);margin:0 0 .8rem;color:var(--sky)}
+.head p{margin:0;color:var(--muted);font-size:1.15rem}
+.zig{height:14px;margin:1.2rem auto 0;width:140px;background:repeating-linear-gradient(135deg,var(--sun) 0 10px,var(--coral) 10px 20px,var(--grass) 20px 30px,var(--sky) 30px 40px);border-radius:8px}
+#library{background:#fff}
+.grid{display:grid;gap:1.6rem;grid-template-columns:1fr;max-width:480px;margin:0 auto}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr);max-width:none;gap:1.2rem}}
+@media(min-width:1000px){.grid{gap:2rem}}
+.card{position:relative;background:#fff;border:4px solid var(--c,var(--sun));border-radius:28px;overflow:hidden;transition:transform .35s,box-shadow .35s;box-shadow:0 8px 0 var(--c,var(--sun))}
+.card:nth-child(1){--c:var(--sun)}.card:nth-child(2){--c:var(--sky)}.card:nth-child(3){--c:var(--grass)}
+.card:hover,.card:focus-within{transform:translateY(-6px) rotate(-.6deg)}
+.card .img{aspect-ratio:4/3;overflow:hidden}
+.card svg{width:100%;height:100%;display:block;transition:transform .8s}
+.card:hover svg{transform:scale(1.07)}
+.card .in{padding:1.2rem 1.3rem 1.5rem}
+.num{display:inline-block;background:var(--c);color:var(--ink);font:700 .85rem var(--display);padding:.25rem .8rem;border-radius:999px;letter-spacing:.08em}
+.card:nth-child(2) .num{color:#fff;background:var(--sky)}.card:nth-child(3) .num{color:#fff;background:#1d8a38}
+.card h3{font:700 1.6rem/1.15 var(--display);margin:.7rem 0 .1rem}
+.card .en{margin:0 0 .6rem;color:var(--plum);font-weight:800}
+.card p.d{margin:0 0 1.2rem;font-size:1rem;color:#33406a}
+.card .btn{padding:.75rem 1.3rem;font-size:.95rem}
+.card .btn::after{content:"";position:absolute;inset:0}
+.note{text-align:center;color:var(--muted);margin-top:2rem;font-size:.95rem}
+/* about */
+#about{background:var(--cream)}
+.pillars{display:grid;gap:1.4rem;grid-template-columns:1fr;max-width:480px;margin:0 auto}
+@media(min-width:700px){.pillars{grid-template-columns:repeat(3,1fr);max-width:none}}
+.pillar{background:#fff;border-radius:28px;padding:1.8rem 1.4rem;text-align:center;border:3px solid #f6dd8b}
+.pillar .ic{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;margin:0 auto 1rem;font-size:2.2rem}
+.pillar:nth-child(1) .ic{background:#cfe8ff}.pillar:nth-child(2) .ic{background:#ffe3a1}.pillar:nth-child(3) .ic{background:#c9f0d2}
+.pillar h3{font:700 1.5rem var(--display);margin:0 0 .4rem}
+.pillar p{margin:0;color:var(--muted)}
+/* player */
+#playerView{display:none;padding:2rem 0 4rem;background:linear-gradient(180deg,var(--sky-l),#fff 60%)}
+body.playing #playerView{display:block;animation:rise .7s ease forwards}
+body.playing #homeView{display:none}
+.back{background:#fff;border:3px solid var(--sun);color:var(--ink);cursor:pointer;font:600 1rem var(--display);padding:.55rem 1.2rem;border-radius:999px}
+.back:hover{background:var(--sun)}
+.ptitle{font:700 clamp(2rem,5.5vw,3.8rem)/1.05 var(--display);margin:1.2rem 0 .2rem;max-width:none;color:var(--sky)}
+.pen{margin:0 0 1.4rem;color:var(--plum);font-weight:800;font-size:1.15rem}
+.stage{position:relative;aspect-ratio:16/9;width:min(100%,calc((100svh - 230px) * 16 / 9));min-width:min(100%,300px);margin:0 auto;background:#000;border:5px solid var(--sun);border-radius:22px;overflow:hidden;box-shadow:0 10px 0 var(--coral)}
+.stage video{width:100%;height:100%;display:block;object-fit:contain;background:#000}
+.stage .msg{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:1.2rem;color:#fff;background:linear-gradient(160deg,#1E7FD6,#7B3FF2)}
+.stage .msg[hidden]{display:none}
+.msg b{display:block;font:700 1.6rem var(--display);margin-bottom:.4rem}
+.msg p{margin:0 auto;max-width:34rem;font-size:1rem}
+.msg code{background:rgba(255,255,255,.2);padding:.1rem .4rem;border-radius:6px;font-size:.9rem}
+.ctl{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem .8rem;margin:1.4rem auto 0;width:min(100%,calc((100svh - 230px) * 16 / 9));min-width:min(100%,300px);background:#fff;border:3px solid var(--sky-l);border-radius:22px;padding:.8rem 1rem}
+@media(max-width:520px){.ctl{width:100%}}
+.ctl button{background:var(--sky);color:#fff;border:0;height:46px;min-width:46px;padding:0 1.1rem;border-radius:999px;cursor:pointer;font:600 .95rem var(--display);transition:transform .15s,background .2s}
+.ctl button:hover:not(:disabled){transform:scale(1.05);background:#135ea3}
+.ctl button#play{background:var(--coral)}
+.ctl button:disabled,.ctl input:disabled{opacity:.4;cursor:not-allowed}
+.ctl button[aria-pressed=true]{background:var(--grass)}
+.ctl input[type=range]{accent-color:var(--coral);height:46px;cursor:pointer}
+#seek{flex:1 1 200px;min-width:120px}#vol{width:84px}
+.time{font-variant-numeric:tabular-nums;font-size:.95rem;min-width:6.4rem;font-weight:800;color:var(--muted)}
+.theme{display:grid;gap:1.6rem;margin:2.2rem auto 0;width:min(100%,calc((100svh - 230px) * 16 / 9));min-width:min(100%,300px)}
+@media(max-width:520px){.theme{width:100%}}
+@media(min-width:800px){.theme{grid-template-columns:2fr 1fr;align-items:start}}
+.theme h2{font-size:1.7rem;margin:0 0 .4rem}
+.theme p{margin:0 0 .8rem}
+.theme small{display:block;color:var(--muted);font-weight:600}
+.acts{display:flex;gap:1rem}
+/* footer */
+footer{background:var(--ink);color:#fff;padding:3rem 0 2rem;text-align:center}
+footer .brand{justify-content:center;margin-bottom:.8rem}
+footer .brand b{color:var(--sun)}
+footer ul{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:.4rem 1.6rem;padding:0;margin:1.2rem 0}
+footer a{text-decoration:none;font:600 1rem var(--display)}
+footer a:hover{color:var(--sun)}
+footer p{margin:.3rem 0}
+footer .pt{color:#c3cbe6;font-size:.95rem;margin-top:1.2rem}
+footer :focus-visible{outline-color:var(--sun)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.rise{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a class="sr" href="#library">Skip to stories</a>
+<header>
+ <div class="wrap"><nav aria-label="Main">
+  <a class="brand" href="#top" aria-label="NGANO home"><span class="mono" aria-hidden="true">N</span><span><b>NGANO</b><small>Zimbabwean Folktales</small></span></a>
+  <ul class="links"><li><a href="#top">Home</a></li><li><a href="#library">Story Library</a></li><li><a href="#about">About</a></li></ul>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">&#9776;</button>
+ </nav></div>
+ <div class="menu" id="menu"><a href="#top">Home</a><a href="#library">Story Library</a><a href="#about">About</a></div>
+</header>
+
+<main>
+<div id="homeView">
+<section class="hero" id="top">
+ <svg class="art" viewBox="0 0 800 500" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Colourful illustration of a Zimbabwean village with a baobab tree, granite rocks and a bright sun">
+  <defs><pattern id="chev" width="24" height="16" patternUnits="userSpaceOnUse"><path d="M0 12 L12 2 L24 12" fill="none" stroke="#FFC83D" stroke-width="3"/></pattern></defs>
+  <g stroke="#FFC83D" stroke-width="6" stroke-linecap="round"><path d="M640 120v-34M640 200v34M560 160h-34M720 160h34M583 103l-24-24M697 217l24 24M583 217l-24 24M697 103l24-24"/></g>
+  <circle cx="640" cy="160" r="46" fill="#FFC83D"/>
+  <g class="cloud" fill="#fff"><ellipse cx="170" cy="90" rx="52" ry="20"/><ellipse cx="205" cy="78" rx="34" ry="20"/><ellipse cx="420" cy="140" rx="44" ry="16"/><ellipse cx="448" cy="130" rx="28" ry="16"/></g>
+  <path d="M0 330 Q130 280 260 325 T520 320 T800 310 V500H0Z" fill="#7fd68d"/>
+  <g fill="#9aa4b8"><path d="M520 330 q8-46 40-52 q26-4 40 18 q20-14 44 2 q22 10 28 32Z"/></g>
+  <g fill="#7b8499"><ellipse cx="582" cy="284" rx="34" ry="13"/><ellipse cx="566" cy="270" rx="22" ry="11"/><ellipse cx="604" cy="266" rx="16" ry="9"/></g>
+  <path d="M0 385 Q220 345 420 380 T800 370 V500H0Z" fill="#27A745"/>
+  <g fill="#8a5a2b"><path d="M160 395 V320 q-2-16 5-22 h14 q5 6 3 22 V395Z"/><path d="M172 322 l-46-36 m46 36 l-8-56 m8 56 l38-50 m-38 50 l50-26 m-50 26 l-56-4" stroke="#8a5a2b" stroke-width="9" stroke-linecap="round" fill="none"/></g>
+  <g fill="#3a9d4a"><circle cx="126" cy="284" r="17"/><circle cx="164" cy="262" r="19"/><circle cx="210" cy="236" r="17"/><circle cx="222" cy="286" r="17"/><circle cx="116" cy="326" r="16"/></g>
+  <g><rect x="330" y="366" width="76" height="44" fill="#F6A04D"/><path d="M316 368 L368 322 L420 368Z" fill="#D9742B"/><rect x="330" y="392" width="76" height="9" fill="url(#chev)"/><rect x="356" y="380" width="24" height="30" rx="12" fill="#7a3a1d"/></g>
+  <path d="M0 430 Q300 405 800 428 V500H0Z" fill="#1d8a38"/><rect y="452" width="800" height="16" fill="url(#chev)"/>
+ </svg>
+ <div class="wrap">
+  <p class="eyebrow rise d1">Our stories. Our heritage.</p>
+  <h1 class="rise d2">Discover the <em>magic of Ngano.</em></h1>
+  <p class="lead rise d3">Explore Zimbabwean folklore through stories told in Shona, with English subtitles. Discover the wisdom, traditions and imagination passed down through generations.</p>
+  <div class="rise d4"><a class="btn" href="#library">Explore the stories &darr;</a></div>
+ </div>
+</section>
+
+<section class="s" id="library">
+ <div class="wrap">
+  <div class="head"><h2>Choose Your Story</h2><p>Every story carries a lesson. Every ngano preserves a piece of who we are.</p><div class="zig"></div></div>
+  <div class="grid">
+   <article class="card"><div class="img"><svg viewBox="0 0 400 300" role="img" aria-label="A hare and a baboon on a green hill"><rect width="400" height="300" fill="#8fd3ff"/><circle cx="320" cy="70" r="34" fill="#FFC83D"/><ellipse cx="90" cy="60" rx="40" ry="14" fill="#fff"/><ellipse cx="120" cy="52" rx="26" ry="14" fill="#fff"/><path d="M0 210 Q150 150 300 200 T400 190 V300H0Z" fill="#27A745"/><path d="M0 255 Q200 220 400 255 V300H0Z" fill="#1d8a38"/><g><ellipse cx="110" cy="215" rx="34" ry="26" fill="#d9d4c9"/><circle cx="142" cy="192" r="18" fill="#d9d4c9"/><ellipse cx="136" cy="156" rx="6" ry="24" fill="#d9d4c9"/><ellipse cx="152" cy="158" rx="6" ry="24" fill="#d9d4c9"/><circle cx="148" cy="190" r="3.5" fill="#1E2A4A"/><circle cx="160" cy="196" r="4" fill="#ff8aa0"/></g><g><ellipse cx="290" cy="215" rx="36" ry="32" fill="#8a5a2b"/><circle cx="290" cy="170" r="25" fill="#8a5a2b"/><ellipse cx="290" cy="178" rx="15" ry="12" fill="#e6b784"/><circle cx="282" cy="166" r="3.5" fill="#1E2A4A"/><circle cx="298" cy="166" r="3.5" fill="#1E2A4A"/><circle cx="263" cy="165" r="8" fill="#8a5a2b"/><circle cx="317" cy="165" r="8" fill="#8a5a2b"/></g></svg></div>
+   <div class="in"><span class="num">Story 01</span><h3 data-t="0">Tsuro naGudo</h3><p class="en" data-e="0">Hare and Baboon</p><p class="d">Discover a traditional animal tale of cleverness, choices and consequences.</p><button class="btn" data-open="0">&#9654; Watch story</button></div></article>
+   <article class="card"><div class="img"><svg viewBox="0 0 400 300" role="img" aria-label="A baobab tree under the moon and stars"><rect width="400" height="300" fill="#3b2a8f"/><circle cx="90" cy="70" r="30" fill="#FFF3B0"/><circle cx="103" cy="62" r="27" fill="#3b2a8f"/><g fill="#FFC83D"><circle cx="300" cy="50" r="3"/><circle cx="220" cy="95" r="3"/><circle cx="350" cy="115" r="3"/><circle cx="170" cy="40" r="3"/><circle cx="260" cy="30" r="2"/></g><path d="M0 235 Q200 205 400 235 V300H0Z" fill="#27A745"/><path d="M180 240 q8-74 4-104 h26 q-4 32 8 104Z" fill="#8a5a2b"/><path d="M190 142 l-62-52 m62 52 l-20-72 m24 72 l16-78 m-12 78 l62-56 m-62 56 l78-26 m-78 26 l-82 4" stroke="#8a5a2b" stroke-width="10" stroke-linecap="round" fill="none"/><g fill="#3a9d4a"><circle cx="124" cy="86" r="14"/><circle cx="170" cy="66" r="16"/><circle cx="208" cy="58" r="14"/><circle cx="262" cy="86" r="15"/><circle cx="276" cy="120" r="14"/><circle cx="104" cy="140" r="14"/></g></svg></div>
+   <div class="in"><span class="num">Story 02</span><h3 data-t="1">Ngano yechipiri</h3><p class="en" data-e="1">A Second Folktale</p><p class="d">Explore another story from Zimbabwe’s rich oral storytelling tradition.</p><button class="btn" data-open="1">&#9654; Watch story</button></div></article>
+   <article class="card"><div class="img"><svg viewBox="0 0 400 300" role="img" aria-label="Balancing granite rocks and a village hut under a sunny sky"><rect width="400" height="300" fill="#ffd27a"/><rect width="400" height="150" fill="#ffb25b" opacity=".6"/><circle cx="110" cy="150" r="52" fill="#FFF3B0"/><path d="M0 215 Q200 185 400 215 V300H0Z" fill="#27A745"/><g fill="#8b93a8"><ellipse cx="290" cy="205" rx="54" ry="22"/><ellipse cx="292" cy="172" rx="38" ry="17"/><ellipse cx="296" cy="148" rx="23" ry="12"/></g><rect x="60" y="226" width="64" height="38" fill="#F6A04D"/><path d="M50 228 L92 190 L134 228Z" fill="#D9742B"/><rect x="82" y="240" width="20" height="24" rx="10" fill="#7a3a1d"/><rect y="268" width="400" height="14" fill="#1d8a38"/></svg></div>
+   <div class="in"><span class="num">Story 03</span><h3 data-t="2">Ngano yechitatu</h3><p class="en" data-e="2">A Third Folktale</p><p class="d">Discover more traditional wisdom, imagination and cultural lessons.</p><button class="btn" data-open="2">&#9654; Watch story</button></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="s" id="about">
+ <div class="wrap">
+  <div class="head"><h2>More Than a Story</h2><p>Ngano are more than entertainment. They carry wisdom, values, language and the traditions that connect generations.</p><div class="zig"></div></div>
+  <div class="pillars">
+   <div class="pillar"><div class="ic" aria-hidden="true">&#128483;&#65039;</div><h3>Language</h3><p>Experience the beauty of Shona storytelling.</p></div>
+   <div class="pillar"><div class="ic" aria-hidden="true">&#128161;</div><h3>Wisdom</h3><p>Discover lessons and values carried through traditional tales.</p></div>
+   <div class="pillar"><div class="ic" aria-hidden="true">&#127795;</div><h3>Heritage</h3><p>Preserve Zimbabwean culture for the next generation.</p></div>
+  </div>
+ </div>
+</section>
+</div>
+
+<div id="playerView"><div class="wrap">
+ <button class="back" id="back">&larr; Back to library</button>
+ <h1 class="ptitle" id="pTitle" tabindex="-1"></h1><p class="pen" id="pEn"></p>
+ <div class="stage">
+  <video id="vid" preload="metadata" playsinline aria-label="Story video"></video>
+  <div class="msg" id="msg"><div><b>Loading the story…</b><p id="msgText"></p></div></div>
+ </div>
+ <div class="ctl" role="group" aria-label="Video controls">
+  <button id="play" disabled>&#9654; Play</button><button id="replay" disabled aria-label="Replay from the start">&#8635; Replay</button>
+  <input id="seek" type="range" min="0" max="100" step="0.1" value="0" disabled aria-label="Progress"><span class="time" id="time">0:00 / 0:00</span>
+  <button id="mute" disabled aria-pressed="false">&#128266; Sound</button><input id="vol" type="range" min="0" max="1" step="0.05" value="1" disabled aria-label="Volume">
+  <button id="cc" hidden aria-pressed="false">CC Subtitles</button><button id="fs" disabled>&#x26F6; Full screen</button>
+ </div>
+ <div class="theme">
+  <div><h2>About this story</h2><p id="pTheme"></p><small>Shona narration with English subtitles. If the subtitles are part of the video, they are always on.</small></div>
+  <div class="acts"><button class="btn alt" id="next">Next story &rarr;</button></div>
+ </div>
+</div></div>
+</main>
+
+<footer><div class="wrap">
+ <a class="brand" href="#top"><span class="mono" aria-hidden="true">N</span><span><b>NGANO</b></span></a>
+ <p>Keeping our heritage alive, one story at a time.</p>
+ <ul><li><a href="#top">Home</a></li><li><a href="#library">Story Library</a></li><li><a href="#about">About</a></li></ul>
+ <p class="pt">Educational prototype</p>
+</div></footer>
+
+<script>
+// Edit titles, descriptions and file names here. Videos sit in the same folder as this file: 1.mp4, 2.mp4, 3.mp4.
+// Optional subtitle files (WebVTT) with the same names: 1.vtt, 2.vtt, 3.vtt. Not needed if subtitles are inside the video.
+var stories=[
+ {id:'story-1',title:'Tsuro naGudo',en:'Hare and Baboon',src:'1.mp4',vtt:'1.vtt',theme:'A traditional animal tale about cleverness, choices and consequences.'},
+ {id:'story-2',title:'Ngano yechipiri',en:'A Second Folktale',src:'2.mp4',vtt:'2.vtt',theme:'A story from Zimbabwe’s rich oral storytelling tradition.'},
+ {id:'story-3',title:'Ngano yechitatu',en:'A Third Folktale',src:'3.mp4',vtt:'3.vtt',theme:'Traditional wisdom, imagination and cultural lessons.'}
+];
+var $=function(i){return document.getElementById(i)},v=$('vid'),cur=0,ok=false;
+stories.forEach(function(s,i){var t=document.querySelector('[data-t="'+i+'"]'),e=document.querySelector('[data-e="'+i+'"]');if(t)t.textContent=s.title;if(e)e.textContent=s.en});
+function fmt(t){t=isFinite(t)?t:0;var m=Math.floor(t/60),s=Math.floor(t%60);return m+':'+(s<10?'0':'')+s}
+function setEnabled(on){['play','replay','seek','mute','vol','fs'].forEach(function(i){$(i).disabled=!on});ok=on}
+function open(i){
+ cur=i;var s=stories[i];
+ $('pTitle').textContent=s.title;$('pEn').textContent=s.en;$('pTheme').textContent=s.theme;
+ v.pause();setEnabled(false);$('cc').hidden=true;$('play').innerHTML='&#9654; Play';$('time').textContent='0:00 / 0:00';$('seek').value=0;
+ $('msg').hidden=false;$('msg').querySelector('b').textContent='Loading the story…';$('msgText').textContent='';
+ v.querySelectorAll('track').forEach(function(t){t.remove()});
+ v.src=s.src;v.load();
+ var tr=document.createElement('track');tr.kind='subtitles';tr.srclang='en';tr.label='English';tr.src=s.vtt;v.appendChild(tr);tr.track.mode='hidden';
+ tr.addEventListener('load',function(){$('cc').hidden=false;$('cc').setAttribute('aria-pressed','false')});
+ document.body.classList.add('playing');window.scrollTo(0,0);$('pTitle').focus({preventScroll:true});
+}
+v.addEventListener('loadedmetadata',function(){$('msg').hidden=true;setEnabled(true);$('time').textContent='0:00 / '+fmt(v.duration)});
+v.addEventListener('error',function(){$('msg').hidden=false;$('msg').querySelector('b').textContent='Video not found';$('msgText').innerHTML='Could not load <code>'+stories[cur].src+'</code>. Check that the file is in the same folder as index.html and the name matches exactly (lowercase).';setEnabled(false)});
+v.addEventListener('timeupdate',function(){if(v.duration)$('seek').value=v.currentTime/v.duration*100;$('time').textContent=fmt(v.currentTime)+' / '+fmt(v.duration)});
+v.addEventListener('play',function(){$('play').innerHTML='&#10074;&#10074; Pause'});
+v.addEventListener('pause',function(){$('play').innerHTML='&#9654; Play'});
+$('play').onclick=function(){if(ok)v.paused?v.play():v.pause()};
+$('replay').onclick=function(){if(ok){v.currentTime=0;v.play()}};
+$('seek').oninput=function(){if(ok&&v.duration)v.currentTime=this.value/100*v.duration};
+$('vol').oninput=function(){v.volume=this.value;v.muted=false;$('mute').setAttribute('aria-pressed','false')};
+$('mute').onclick=function(){v.muted=!v.muted;this.setAttribute('aria-pressed',v.muted)};
+$('cc').onclick=function(){var on=this.getAttribute('aria-pressed')!=='true';this.setAttribute('aria-pressed',on);var t=v.textTracks[0];if(t)t.mode=on?'showing':'hidden'};
+$('fs').onclick=function(){var el=v;if(el.requestFullscreen)el.requestFullscreen();else if(el.webkitEnterFullscreen)el.webkitEnterFullscreen();else if(el.webkitRequestFullscreen)el.webkitRequestFullscreen()};
+document.querySelectorAll('[data-open]').forEach(function(b){b.onclick=function(){location.hash='story-'+(+b.dataset.open+1)}});
+$('back').onclick=function(){location.hash='library'};
+$('next').onclick=function(){location.hash='story-'+((cur+1)%stories.length+1)};
+$('burger').onclick=function(){var o=$('menu').classList.toggle('open');this.setAttribute('aria-expanded',o);this.setAttribute('aria-label',o?'Close menu':'Open menu')};
+$('menu').onclick=function(){this.classList.remove('open');$('burger').setAttribute('aria-expanded','false')};
+function route(){
+ var h=location.hash.slice(1),i=stories.findIndex(function(s){return s.id===h});
+ if(i>=0){open(i);return}
+ if(document.body.classList.contains('playing')){v.pause();document.body.classList.remove('playing')}
+ var el=h&&document.getElementById(h);
+ setTimeout(function(){el?el.scrollIntoView():window.scrollTo(0,0)},30);
+}
+window.addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>
